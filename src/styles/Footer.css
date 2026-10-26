@@ -1,0 +1,95 @@
+/* --- OVERALL FOOTER --- */
+.global-footer {
+  background-color: #111111; /* The heavy 30% Black from our theme */
+  color: #dddddd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* border-top: 4px solid #f5b041; Industrial yellow accent line */
+  padding-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  padding: 0 50px 50px 50px;
+}
+
+/* --- COLUMN 1: BRAND --- */
+.footer-logo {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0 0 5px 0;
+  letter-spacing: 1px;
+}
+
+.footer-tagline {
+  color: #f5b041;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 0 0 20px 0;
+}
+
+.footer-about {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #aaaaaa;
+  margin-bottom: 20px;
+}
+
+.director-name {
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.director-name strong {
+  color: #f5b041;
+}
+
+/* --- COLUMNS 2 & 3: LOCATIONS --- */
+.footer-heading {
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 10px;
+}
+
+.thirunelveli-heading {
+  margin-top: 30px;
+}
+
+.footer-text, .footer-contact, .footer-email {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #aaaaaa;
+  margin-bottom: 10px;
+}
+
+.footer-contact {
+  color: #cccccc;
+  font-weight: 600;
+}
+
+/* --- BOTTOM COPYRIGHT BAR --- */
+.footer-bottom {
+  background-color: #0a0a0a;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.85rem;
+  color: #777777;
+  border-top: 1px solid #222222;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 968px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px 40px 20px;
+  }
+}

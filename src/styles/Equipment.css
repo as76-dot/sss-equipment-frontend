@@ -1,0 +1,113 @@
+/* --- THE EQUIPMENT CARD --- */
+.equipment-card {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.equipment-card:hover {
+  transform: translateY(-8px);
+  /* 10% Metallic glow on hover */
+  box-shadow: 0 15px 35px rgba(158, 158, 158, 0.3);
+  border-color: #cccccc;
+}
+
+/* --- NEW: IMAGE BOX STYLING --- */
+.card-image-box {
+  height: 250px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.equipment-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+  transition: transform 0.4s ease;
+}
+
+/* Zooms the image slightly when the user hovers over the card */
+.equipment-card:hover .equipment-img {
+  transform: scale(1.08);
+}
+
+.card-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.brand-badge {
+  align-self: flex-start;
+  background: #111111;
+  color: #ffffff;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.model-name {
+  margin: 0 0 15px 0;
+  font-size: 1.6rem;
+  color: #111111;
+  font-weight: 800;
+}
+
+.quick-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  color: #444444;
+  font-size: 0.95rem;
+}
+
+.quick-specs li {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 5px;
+}
+
+/* --- SMALL METALLIC BUTTON --- */
+.metallic-btn-small {
+  margin-top: auto;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  color: #111111;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.metallic-btn-small:hover {
+  background: linear-gradient(145deg, #444444, #1a1a1a);
+  color: #ffffff;
+  border-color: #111111;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .equipment-page {
+    padding: 40px 20px;
+  }
+  .equipment-title {
+    font-size: 2.2rem;
+  }
+}

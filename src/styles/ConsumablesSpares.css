@@ -1,0 +1,134 @@
+/* --- OVERALL SECTION --- */
+.consumables-section {
+  background-color: #f9f9f9;
+  padding: 80px 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.consumables-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.consumables-title {
+  font-size: 2.5rem;
+  color: #111111;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.consumables-subtitle {
+  color: #666666;
+  font-size: 1.1rem;
+}
+
+/* --- THE 3-COLUMN GRID --- */
+.consumables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- INDIVIDUAL PRODUCT CARDS --- */
+.product-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* --- IMAGE BOX STYLING (Clean & Transparent) --- */
+.product-image-box {
+  height: 250px;
+  background: transparent;
+  /* Makes the box background invisible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  overflow: hidden;
+}
+
+/* Base styling applied to all images */
+.consumable-img {
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  /* filter: drop-shadow(0 15px 20px rgba(0,0,0,0.08)); */
+}
+
+.product-card:hover .consumable-img {
+  transform: scale(1.08);
+}
+
+/* --- INDIVIDUAL IMAGE CONTROLS --- */
+/* Adjust these percentages to scale each image independently */
+
+.img-grease {
+  max-width: 350px;
+  /* max-height: 330px; */
+}
+
+.img-filter {
+  max-width: 250px;
+  /* max-height: 250px; */
+}
+
+.img-pinbush {
+  max-width: 250px;
+  /* max-height: 250px; */
+}
+
+/* --- TEXT INFO --- */
+.product-info {
+  text-align: center;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-category {
+  font-size: 0.8rem;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.product-name {
+  font-size: 1.4rem;
+  color: #111111;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.product-desc {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .consumables-title {
+    font-size: 2.1rem;
+  }
+
+    .consumables-section {
+      padding: 50px 20px;
+    }
+
+  }

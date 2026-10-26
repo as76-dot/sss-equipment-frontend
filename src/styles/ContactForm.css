@@ -1,0 +1,218 @@
+/* --- OVERALL PAGE --- */
+.contact-page {
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- PREMIUM HEADER --- */
+.contact-header {
+  background-color: #111111;
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.contact-divider {
+  width: 80px;
+  height: 4px;
+  background-color: #f5b041;
+  margin: 0 auto 25px auto;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  color: #cccccc;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- COMMAND CENTER CONTAINER --- */
+.contact-container {
+  max-width: 1200px;
+  margin: -40px auto 80px auto;
+  /* Pulls the layout up over the dark header slightly */
+  display: flex;
+  gap: 40px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* --- LEFT COLUMN: LOCATIONS --- */
+.contact-info-column {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.location-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-top: 4px solid #111111;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.location-title {
+  font-size: 1.4rem;
+  color: #111111;
+  margin-bottom: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.location-address {
+  font-size: 1.05rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.location-details p {
+  font-size: 1rem;
+  color: #222222;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* --- RIGHT COLUMN: THE FORM --- */
+.contact-form-column {
+  flex: 1.2;
+}
+
+.form-wrapper {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-heading {
+  font-size: 1.8rem;
+  color: #111111;
+  margin-bottom: 25px;
+  font-weight: 800;
+  border-bottom: 2px solid #eeeeee;
+  padding-bottom: 15px;
+}
+
+.b2b-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  color: #444444;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.b2b-form input,
+.b2b-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: #fcfcfc;
+}
+
+.b2b-form input:focus,
+.b2b-form textarea:focus {
+  outline: none;
+  border-color: #111111;
+  background-color: #ffffff;
+}
+
+.split-group {
+  flex-direction: row;
+  gap: 20px;
+}
+
+.sub-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-btn {
+  background-color: #111111;
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #f5b041;
+  color: #111111;
+}
+
+/* --- TRUST BADGE --- */
+.trust-badge {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #fff8eb;
+  /* Faint yellow warning tint */
+  border-left: 4px solid #f5b041;
+  color: #333333;
+  font-size: 0.95rem;
+}
+
+/* --- GOOGLE MAPS CONTAINER --- */
+.map-container {
+  width: 100%;
+  margin-top: 40px;
+  background-color: #dddddd;
+  /* Removes bottom space below the map */
+  display: flex;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+
+  .contact-header {
+    padding: 30px 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    margin-top: 0;
+    padding: 30px 20px;
+  }
+
+  .split-group {
+    flex-direction: column;
+    /* gap: 20px; */
+  }
+
+  .contact-title {
+    font-size: 1.3rem;
+  }
+}

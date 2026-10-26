@@ -1,0 +1,179 @@
+/* --- OVERALL SECTION --- */
+.vsi-section {
+  background-color: #ffffff;
+  /* 60% White for that clean, precision look */
+  padding: 80px 50px;
+  border-top: 1px solid #eeeeee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.vsi-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.vsi-title {
+  font-size: 2.5rem;
+  color: #111111;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.vsi-subtitle {
+  color: #666666;
+  font-size: 1.1rem;
+}
+
+.vsi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+  align-items: stretch;
+}
+
+/* --- LEFT COLUMN: 3D ROTOR IMAGE --- */
+.vsi-image-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- NEW: CORRECT IMAGE STYLING --- */
+.vsi-image {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  object-fit: contain;
+  /* Adds a 3D drop shadow to the actual image */
+  filter: drop-shadow(15px 25px 30px rgba(0, 0, 0, 0.20));
+  /* Smooth floating animation for a premium feel */
+  /* animation: floatMachinery 6s ease-in-out infinite; */
+}
+
+/* Keyframes for the image floating effect */
+@keyframes floatMachinery {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* --- RIGHT COLUMN: PARTS CONTENT --- */
+.vsi-content-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.parts-list-box {
+  background: #fcfcfc;
+  border: 1px solid #eeeeee;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.parts-box-title {
+  font-size: 1.3rem;
+  color: #111111;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #111111;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.parts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.part-tag {
+  background: #111111;
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.part-tag:hover {
+  background: #444444;
+  transform: translateY(-2px);
+}
+
+/* --- NEW: HARDWARE PARTS GALLERY --- */
+.vsi-accessories-gallery {
+  /* background: #fcfcfc; */
+  /* border: 1px solid #eeeeee; */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.parts-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 15px;
+}
+
+.part-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.part-img:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0 8px 15px rgba(0,0,0,0.1); */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .vsi-title {
+    font-size: 2.1rem;
+  }
+
+  .vsi-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vsi-image {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .parts-grid {
+    justify-content: center;
+  }
+
+  /* --- NEW: MOBILE TWEAKS FOR THE GALLERY --- */
+  .vsi-accessories-gallery {
+    padding: 20px;
+    /* Gives a little more room on small screens */
+  }
+
+  .parts-image-grid {
+    /* Shrinks the minimum image size slightly so more fit on a tiny phone screen */
+    grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
+    gap: 10px;
+  }
+}

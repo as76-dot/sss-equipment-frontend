@@ -1,0 +1,175 @@
+/* --- OVERALL SECTION --- */
+.dealer-section {
+  background-color: #ffffff; /* 60% White */
+  padding: 80px 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dealer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* --- LEFT COLUMN: IMAGE PLACEHOLDER --- */
+.dealer-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- NEW: IMAGE BUILD STYLING --- */
+.dealer-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  /* Adds a 3D drop shadow to the actual image */
+  filter: drop-shadow(15px 25px 30px rgba(0,0,0,0.15));
+  /* Smooth floating animation for a premium feel */
+  animation: floatMachinery 4s ease-in-out infinite;
+}
+
+/* Keyframes for the image floating effect */
+@keyframes floatMachinery {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.toku-placeholder {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 3/4;
+  background: linear-gradient(145deg, #f0f4f8, #e1e8ed);
+  border: 2px dashed #004aad; /* A hint of TOKU Blue */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #555555;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  box-shadow: 10px 20px 40px rgba(0,0,0,0.08);
+}
+
+.toku-badge {
+  position: absolute;
+  top: 20px;
+  left: -15px;
+  background: #004aad; /* TOKU Blue */
+  color: white;
+  padding: 5px 15px;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
+}
+
+.made-in-japan {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #111111;
+  letter-spacing: 1px;
+}
+
+/* --- RIGHT COLUMN: CONTENT --- */
+.dealer-content {
+  flex: 1;
+}
+
+.dealer-subtitle {
+  color: #434343;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.dealer-title {
+  font-size: 2.8rem;
+  color: #111111; /* 30% Black */
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.text-highlight {
+  background: linear-gradient(90deg, #000000 0%, #555555 50%, #000000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dealer-description {
+  font-size: 1.1rem;
+  color: #444444;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* --- BULLET POINTS --- */
+.dealer-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px 0;
+}
+
+.dealer-features li {
+  font-size: 1.05rem;
+  color: #111111;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* --- THE BUTTON --- */
+.dealer-btn {
+  background: #111111;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  border: 2px solid #111111;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dealer-btn:hover {
+  background: #ffffff;
+  color: #111111;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 968px) {
+  .dealer-container {
+    display: flex;
+    flex-direction: column-reverse; /* This flips the order so the text goes on top! */
+    text-align: center; /* Centers the text nicely on mobile */
+  }
+  
+  .dealer-features li {
+    text-align: center;
+  }
+  
+  .toku-badge {
+    left: 20px;
+  }
+  .dealer-title {
+  font-size: 2.3rem;
+  }
+
+  /* --- NEW: MOBILE RESPONSIVE IMAGE --- */
+  .dealer-image {
+    max-width: 30%;
+    margin-top: 20px;
+  }
+}

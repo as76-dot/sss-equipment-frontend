@@ -1,0 +1,238 @@
+/* --- OVERALL SECTION --- */
+.excavator-section {
+  background-color: #fcfcfc;
+  padding: 80px 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.excavator-header {
+  text-align: center;
+  margin-bottom: 50px;
+  /* NEW: Flexbox helps center the invisible track directly under the text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.excavator-title {
+  font-size: 2.5rem;
+  color: #111111;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* --- NEW: THE INVISIBLE TRACK --- */
+.title-underline {
+  height: 3px;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  background-color: transparent;
+}
+
+/* --- NEW: THE SLIDING YELLOW DASH --- */
+.title-underline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  /* The size of your dash */
+  height: 100%;
+  background-color: #f5b041;
+  border-radius: 2px;
+  animation: scanDash 8s ease-in-out infinite;
+}
+
+/* Keyframes to make it bounce perfectly from edge to edge */
+@keyframes scanDash {
+  0% {
+    left: 0%;
+    transform: translateX(0);
+  }
+
+  50% {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+
+  /* Hits exactly the right edge */
+  100% {
+    left: 0%;
+    transform: translateX(0);
+  }
+
+  /* Returns to the left edge */
+}
+
+.excavator-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- TOP ROW: TRACK DIAGRAM --- */
+.track-diagram-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+/* --- NEW: IMAGE BUILD STYLING --- */
+.track-diagram-wrapper img {
+  flex: 1;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: contain;
+  /* Adds a 3D drop shadow to the actual image */
+  /* filter: drop-shadow(15px 25px 30px rgba(0,0,0,0.15)); */
+  /* Smooth floating animation for a premium feel */
+  /* animation: floatMachinery 6s ease-in-out infinite; */
+}
+
+/* Keyframes for the image floating effect */
+@keyframes floatMachinery {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.track-list-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list-title {
+  font-size: 1.4rem;
+  color: #111111;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eeeeee;
+  padding-bottom: 10px;
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.track-list li {
+  font-size: 1.1rem;
+  color: #444444;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.bullet-point {
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+/* --- BOTTOM ROW: ADDITIONAL PARTS GRID --- */
+.additional-parts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.part-card {
+  background: #ffffff;
+  /* border: 1px solid #b4b4b4; */
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.part-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.09);
+  border-color: #cccccc;
+}
+
+.part-image-mini {
+  height: 120px;
+  background: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* CSS BREAKDOWN: */
+  /* gap: 15px -> Creates a 15-pixel empty space between the two images so they don't touch */
+  gap: 15px;
+  /* padding: 10px -> Prevents the images from hitting the outer edges of the grey box */
+  padding: 10px;
+}
+
+/* This targets the actual images inside the mini box */
+.part-image-mini img {
+  /* CSS BREAKDOWN: */
+  /* max-height: 100% -> Forces the image to never grow taller than the 120px box */
+  max-height: 100%;
+  /* max-width: 45% -> Forces each image to take up slightly less than half the box, ensuring two images easily fit side-by-side without breaking the layout */
+  max-width: 45%;
+  /* object-fit: contain -> Ensures the image keeps its original aspect ratio and doesn't stretch or distort */
+  object-fit: contain;
+  /* transition -> Makes the hover zoom effect smooth instead of instant */
+  transition: transform 0.3s ease;
+}
+
+.part-image-mini img:hover {
+  /* transform: scale(1.1) -> Zooms the image in by 10% when the user hovers over it */
+  transform: scale(1.5);
+}
+
+.part-title {
+  font-size: 1.2rem;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.part-desc {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+
+  .excavator-title {
+    font-size: 2.1rem;
+  }
+
+  .track-diagram-wrapper {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .track-list-container {
+    align-items: center;
+  }
+
+  /* --- NEW: MOBILE RESPONSIVE IMAGE --- */
+  .track-diagram-wrapper img {
+    max-width: 700px;
+    /* margin-bottom: 10px; */
+  }
+
+}

@@ -1,0 +1,192 @@
+/* --- OVERALL PAGE --- */
+.spares-page {
+  background-color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- PREMIUM HEADER --- */
+.spares-header {
+  background-color: #111111; 
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.spares-title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+}
+
+.spares-divider {
+  width: 80px;
+  height: 4px;
+  background-color: #f5b041;
+  margin: 0 auto 30px auto;
+}
+
+.spares-subtitle {
+  font-size: 1.15rem;
+  color: #cccccc;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- COLOR BANDS (Alternating Backgrounds) --- */
+.color-band {
+  width: 100%;
+  /* FIXED: Reduced from 100px to 40px to eliminate the massive gaps */
+  padding: 40px 0; 
+}
+
+.band-light {
+  background-color: #ffffff; 
+}
+
+.band-dark {
+  background-color: #f6f6f6; 
+}
+
+/* --- ZIG-ZAG LAYOUT WRAPPER --- */
+.zigzag-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.zigzag-wrapper.reverse {
+  flex-direction: row-reverse;
+}
+
+.zigzag-content {
+  flex: 1;
+}
+
+.zigzag-heading {
+  font-size: 2.2rem;
+  color: #111111;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+/* --- PREMIUM PARTS LIST STYLING --- */
+.parts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 35px 0;
+}
+
+.parts-list li {
+  font-size: 1.05rem;
+  color: #444444;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.parts-list strong {
+  color: #111111;
+  font-weight: 800;
+}
+
+/* --- LIGHT/DARK THEME OVERRIDES --- */
+.band-dark .zigzag-heading {
+  color: #000000;
+}
+
+.band-dark .parts-list li {
+  color: #000000;
+}
+
+.band-dark .parts-list strong {
+  color: #000000;
+}
+
+/* --- OPTION B: SPLIT-GRID BENTO BOX CSS --- */
+.bento-grid {
+  flex: 1.2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px; 
+  width: 100%;
+  aspect-ratio: 4/3; 
+}
+
+.bento-box {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: none; 
+}
+
+.band-dark .bento-box {
+  box-shadow: none; 
+}
+
+.bento-tall {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.bento-square-top {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.bento-square-bottom {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.bento-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 15px rgba(0,0,0,0.06));
+  transition: transform 0.4s ease;
+}
+
+.band-dark .bento-img {
+  filter: drop-shadow(0 8px 15px rgba(0,0,0,0.4));
+}
+
+.bento-box:hover .bento-img {
+  transform: scale(1.08); 
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .zigzag-wrapper, 
+  .zigzag-wrapper.reverse {
+    flex-direction: column;
+    text-align: left; 
+    gap: 40px;
+  }
+  
+  .bento-grid {
+    aspect-ratio: 1/1;
+  }
+  
+  .spares-title {
+    font-size: 1.3rem;
+  }
+  
+  .spares-header {
+    padding: 40px 20px;
+  }
+  
+  .color-band {
+    /* FIXED: Reduced padding on mobile as well */
+    padding: 30px 0; 
+  }
+}
