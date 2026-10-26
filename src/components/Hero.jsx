@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import '../styles/Hero.css';
-import stransImage from '../assets/hero.png';
+import stransImage from '../assets/vsi-parts/Strans-home.png';
 
 function Hero() {
   const navigate = useNavigate();
