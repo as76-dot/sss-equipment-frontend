@@ -1,14 +1,14 @@
 // 1. Import all your optimized images here (Method A)
-import img20s from '../assets/strans/Srb20S.png';
-import img30s from '../assets/strans/Srb30S.png';
-import img40s from '../assets/strans/Srb40S.png';
-import img430s from '../assets/strans/Srb430S.png';
-import img435s from '../assets/strans/Srb435S.png';
-import img50s from '../assets/strans/Srb50S.png';
-import img70s from '../assets/strans/Srb70S.png';
-import img81s from '../assets/strans/Srb81S.png';
-import img121s from '../assets/strans/Srb121S.png';
-import img131s from '../assets/strans/Srb131S.png';
+import img20s from '../assets/strans/Srb20s.png';
+import img30s from '../assets/strans/Srb30s.png';
+import img40s from '../assets/strans/Srb40s.png';
+import img430s from '../assets/strans/Srb430s.png';
+import img435s from '../assets/strans/Srb435s.png';
+import img50s from '../assets/strans/Srb50s.png';
+import img70s from '../assets/strans/Srb70s.png';
+import img81s from '../assets/strans/Srb81s.png';
+import img121s from '../assets/strans/Srb121s.png';
+import img131s from '../assets/strans/Srb131s.png';
 
 // FIXED: Restructured the data to include the brand, the image, and the nested "specs" object!
 export const stransBreakers = [
